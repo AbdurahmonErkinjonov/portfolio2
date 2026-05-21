@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdurahmon Erkinjonov | Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="cursor-glow"></div>
+    
+    <header class="glass-header">
+        <nav>
+            <div class="logo">AE<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="#about">Men haqimda</a></li>
+                <li><a href="#skills">Ko'nikmalar</a></li>
+                <li><a href="#projects">Loyihalar</a></li>
+                <li><a href="#contact">Aloqa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch-title" data-text="Salom, men Abdurahmonman">Salom, men <span>Abdurahmon</span>man</h1>
+                <h2 class="typewriter-text"><span id="typewriter"></span><span class="cursor">|</span></h2>
+                <p class="hero-desc"></p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Bog'lanish</a>
+                    <a href="#skills" class="btn btn-secondary">Ko'nikmalarim</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title">Men <span>Haqimda</span></h2>
+            <div class="about-cards">
+                <div class="glass-card reveal">
+                    <div class="card-icon"><i class="fa-solid fa-server"></i></div>
+                    <h3>Backend Developer</h3>
+                    <p>Murakkab mantiq va xavfsiz tizimlarni qurish bo'yicha mutaxassis.</p>
+                </div>
+                <div class="glass-card reveal delay-1">
+                    <div class="card-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Web Programmer</h3>
+                    <p>Yuqori tezlikda ishlovchi zamonaviy veb-ilovalarni ishlab chiqish.</p>
+                </div>
+                <div class="glass-card reveal delay-2">
+                    <div class="card-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3>API Builder</h3>
+                    <p>Tizimlar o'rtasida ma'lumot almashinuvchi mustahkam REST API'lar.</p>
+                </div>
+                <div class="glass-card reveal delay-3">
+                    <div class="card-icon"><i class="fa-brands fa-telegram"></i></div>
+                    <h3>Telegram Bot Engineer</h3>
+                    <p>Foydali va avtomatlashtirilgan Telegram botlarini yaratish.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">Ko'nikmalar va <span>Texnologiyalar</span></h2>
+            <div class="skills-container reveal">
+                <!-- Python ecosystem -->
+                <div class="skill-tag" style="--i: 1;"><i class="fa-brands fa-python"></i> Python</div>
+                <div class="skill-tag" style="--i: 2;"><i class="fa-brands fa-python"></i> Django</div>
+                <div class="skill-tag" style="--i: 3;"><i class="fa-solid fa-flask"></i> Flask</div>
+                <div class="skill-tag" style="--i: 4;"><i class="fa-solid fa-rocket"></i> Fast API</div>
+                <div class="skill-tag" style="--i: 5;"><i class="fa-solid fa-plug"></i> Rest API</div>
+                <div class="skill-tag" style="--i: 6;"><i class="fa-solid fa-robot"></i> aiogram</div>
+                <!-- Databases -->
+                <div class="skill-tag" style="--i: 7;"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+                <div class="skill-tag" style="--i: 8;"><i class="fa-solid fa-database"></i> SQLite</div>
+                <!-- Frontend -->
+                <div class="skill-tag" style="--i: 9;"><i class="fa-brands fa-html5"></i> HTML (basics)</div>
+                <div class="skill-tag" style="--i: 10;"><i class="fa-brands fa-css3-alt"></i> CSS (basics)</div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Mening <span>Loyihalarim</span></h2>
+            <div class="projects-grid">
+                <a href="https://partfolio.pythonanywhere.com/" target="_blank" class="project-card reveal">
+                    <div class="project-content">
+                        <h3>Portfolio Website</h3>
+                        <p>Shaxsiy portfolio veb-sayti. Interaktiv animatsiyalar va zamonaviy UI/UX dizayniga ega loyiha.</p>
+                        <span class="project-link">Saytga o'tish <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                
+                <a href="https://onlinecourse123.pythonanywhere.com/" target="_blank" class="project-card reveal delay-1">
+                    <div class="project-content">
+                        <h3>Online Course</h3>
+                        <p>Onlayn ta'lim platformasi. Foydalanuvchilar kurslarni ko'rishi va o'rganishi mumkin bo'lgan qulay tizim.</p>
+                        <span class="project-link">Saytga o'tish <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                
+                <a href="https://tonirovkacenter.pythonanywhere.com/login/" target="_blank" class="project-card reveal delay-2">
+                    <div class="project-content">
+                        <h3>Avtosalon boshqaruv tizimi</h3>
+                        <p>Avtomobillarga xizmat ko'rsatish markazi uchun maxsus boshqaruv tizimi (CRM) va veb-sayt.</p>
+                        <span class="project-link">Saytga o'tish <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content reveal">
+            <h2>Men bilan <span>aloqaga</span> chiqing</h2>
+            <p>Loyihangiz bormi? Keling, uni birgalikda amalga oshiramiz!</p>
+            <div class="social-links">
+                <a href="https://instagram.com/erkinjanoww01" target="_blank" class="social-btn instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>erkinjanoww01</span>
+                </a>
+                <a href="https://github.com/AbdurahmonErkinjonov" target="_blank" class="social-btn github">
+                    <i class="fa-brands fa-github"></i>
+                    <span>AbdurahmonErkinjonov</span>
+                </a>
+                <a href="https://www.linkedin.com/in/abdurahmonerkinjonov/" target="_blank" class="social-btn linkedin">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Abdurahmon Erkinjonov. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
