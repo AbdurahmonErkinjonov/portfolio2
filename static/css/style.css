@@ -158,12 +158,15 @@ body {
 }
 
 .typewriter-text {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
-    margin-bottom: 20px;
-    height: 40px;
+    margin-bottom: 25px;
+    min-height: 50px;
+    height: auto;
+    line-height: 1.4;
     color: #a0a0a0;
 }
+
 
 .cursor {
     animation: blink 0.7s infinite;
@@ -490,9 +493,486 @@ footer {
     transform: translateY(-5px);
 }
 
+.social-btn.telegram:hover {
+    background: #0088cc;
+    border-color: transparent;
+    transform: translateY(-5px);
+}
+
+.social-btn.phone:hover {
+    background: #25D366;
+    border-color: transparent;
+    transform: translateY(-5px);
+}
+
+.social-btn.email:hover {
+    background: #ea4335;
+    border-color: transparent;
+    transform: translateY(-5px);
+}
+
 .copyright {
     color: #777;
     font-size: 0.9rem;
+}
+
+/* Button Outline & Extra Buttons */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: #05050f;
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+    border-radius: 20px;
+}
+
+/* Project Badge & Tech Stack Tags */
+.project-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(0, 240, 255, 0.15);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.tech-stack span {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #4deeea;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* ====================================
+   REZYUME / CV SECTION STYLES
+   ==================================== */
+.resume-section {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.resume-info-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.info-chip {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(10px);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.info-chip i {
+    color: var(--primary-color);
+}
+
+.info-chip:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.15);
+}
+
+.resume-block {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: border-color 0.3s ease;
+}
+
+.resume-block:hover {
+    border-color: rgba(0, 240, 255, 0.3);
+}
+
+.block-title {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.block-title i {
+    color: var(--primary-color);
+}
+
+.summary-text {
+    color: #ccc;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid rgba(0, 240, 255, 0.3);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -27px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.timeline-date {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-role {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.timeline-company {
+    font-size: 1rem;
+    color: #8a2be2;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.timeline-list {
+    list-style: none;
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.timeline-list li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 6px;
+}
+
+.timeline-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Education & Languages */
+.edu-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+
+.edu-title {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.edu-desc {
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+.sub-block-title {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sub-block-title i {
+    color: var(--primary-color);
+}
+
+.language-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.lang-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.lang-name {
+    color: #fff;
+    font-weight: 600;
+}
+
+.lang-level {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* Strengths & Availability */
+.strengths-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.strength-tag {
+    background: rgba(138, 43, 226, 0.15);
+    border: 1px solid rgba(138, 43, 226, 0.4);
+    color: #e0e0e0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.strength-tag i {
+    color: var(--primary-color);
+}
+
+.availability-info {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.availability-info i {
+    color: var(--primary-color);
+    margin-right: 6px;
+}
+
+.resume-action-box {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* ====================================
+   CV MODAL & PRINT STYLES
+   ==================================== */
+.cv-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 2000;
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+.cv-modal.open {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cv-modal-content {
+    background: #0b0c1b;
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    max-width: 900px;
+    width: 100%;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.cv-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 15px;
+}
+
+.cv-modal-header h2 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+}
+
+.cv-modal-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--secondary-color);
+}
+
+.cv-print-body {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+.cv-header h1 {
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+.cv-header h3 {
+    color: var(--primary-color);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.cv-meta {
+    font-size: 0.95rem;
+    color: #aaa;
+    margin-bottom: 4px;
+}
+
+.cv-print-body hr {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 20px 0;
+}
+
+.cv-section {
+    margin-bottom: 25px;
+}
+
+.cv-section h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+}
+
+.cv-section ul {
+    padding-left: 20px;
+}
+
+.cv-section li {
+    margin-bottom: 8px;
+}
+
+/* Print CSS */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    .cv-modal, .cv-modal-content, .cv-print-body, .cv-print-body * {
+        visibility: visible;
+    }
+    .cv-modal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #fff !important;
+        color: #000 !important;
+        width: 100%;
+        padding: 0;
+    }
+    .cv-modal-content {
+        background: #fff !important;
+        color: #000 !important;
+        border: none !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        padding: 20px !important;
+    }
+    .cv-modal-header {
+        display: none !important;
+    }
+    .cv-header h1, .cv-section h3 {
+        color: #000 !important;
+    }
+    .cv-header h3 {
+        color: #333 !important;
+    }
+    .cv-meta, .cv-print-body p, .cv-section li {
+        color: #111 !important;
+    }
+    .cv-section h3 {
+        border-bottom-color: #000 !important;
+    }
 }
 
 /* Scroll Animations */
@@ -511,12 +991,234 @@ footer {
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .glitch-title { font-size: 2.5rem; }
-    .glass-header { padding: 15px 20px; }
-    .nav-links { display: none; }
-    .hero-buttons { display: flex; flex-direction: column; gap: 15px; }
-    .btn { margin: 0; }
-    .social-btn { width: 100%; justify-content: center; }
+.mobile-cv-btn {
+    display: none;
 }
+
+/* Responsive (Tablet 768px) */
+@media (max-width: 768px) {
+    /* Header */
+    .glass-header {
+        padding: 10px 16px;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .nav-links {
+        display: none;
+    }
+    .mobile-cv-btn {
+        display: inline-flex;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 100px 16px 50px;
+        min-height: auto;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .glitch-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 12px;
+        word-break: break-word;
+    }
+    .typewriter-text {
+        font-size: 1.1rem;
+        min-height: 40px;
+        line-height: 1.4;
+        margin-bottom: 16px;
+    }
+    .hero-desc {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 24px;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .btn {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 60px 16px;
+    }
+    .section-title {
+        font-size: 1.75rem;
+        margin-bottom: 28px;
+    }
+
+    /* About & Projects grids -> single column */
+    .about-cards,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .glass-card {
+        padding: 22px 18px;
+    }
+    .card-icon {
+        font-size: 2.2rem;
+        margin-bottom: 14px;
+    }
+    .glass-card h3 {
+        font-size: 1.25rem;
+    }
+
+    /* Skills */
+    .skills-container {
+        gap: 8px;
+        justify-content: center;
+    }
+    .skill-tag {
+        font-size: 0.82rem;
+        padding: 7px 12px;
+        gap: 6px;
+    }
+    .skill-tag i {
+        font-size: 1rem;
+    }
+
+    /* Project cards */
+    .project-card {
+        padding: 20px 16px;
+    }
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 50px 16px 30px;
+    }
+    .footer-title {
+        font-size: 1.6rem;
+    }
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .social-btn {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+        padding: 12px 18px;
+        font-size: 0.95rem;
+    }
+    .footer-bottom {
+        font-size: 0.82rem;
+        margin-top: 30px;
+    }
+
+    /* Contact form */
+    .contact-form {
+        padding: 24px 16px;
+    }
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 0.92rem;
+    }
+
+    /* Standalone CV Page */
+    .cv-page-container {
+        margin: 75px auto 30px;
+        padding: 0 8px;
+    }
+    .cv-paper {
+        padding: 20px 14px;
+        border-radius: 14px;
+    }
+    .cv-top-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+    .cv-top-bar .btn {
+        width: 100%;
+        justify-content: center;
+        font-size: 0.88rem;
+        padding: 10px 14px;
+    }
+    .cv-hero-title {
+        font-size: 1.55rem;
+        word-break: break-word;
+    }
+    .cv-hero-subtitle {
+        font-size: 0.9rem;
+    }
+    .cv-contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 12px;
+    }
+    .cv-contact-item {
+        font-size: 0.85rem;
+        word-break: break-all;
+    }
+    .cv-skills-grid,
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .cv-project-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .cv-section h3 {
+        font-size: 1.05rem;
+    }
+}
+
+/* Phone (max 480px) */
+@media (max-width: 480px) {
+    .glass-header {
+        padding: 8px 12px;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+    .mobile-cv-btn {
+        font-size: 0.78rem;
+        padding: 7px 11px;
+    }
+    .glitch-title {
+        font-size: 1.65rem;
+    }
+    .typewriter-text {
+        font-size: 0.95rem;
+        min-height: 36px;
+    }
+    .hero-desc {
+        font-size: 0.88rem;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .cv-hero-title {
+        font-size: 1.35rem;
+    }
+    .skill-tag {
+        font-size: 0.78rem;
+        padding: 6px 10px;
+    }
+}
+
+
+

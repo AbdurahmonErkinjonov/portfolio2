@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Typewriter effect
-    const textToType = "Backend Developer | Web Programmer | Telegram Bot Engineer";
+    const textToType = "Backend Developer | Python/Django | Telegram Bot Engineer";
     const typewriterElement = document.getElementById('typewriter');
+
     let i = 0;
     
     function typeWriter() {
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add glowing effect on hover for links and buttons
-    const interactiveElements = document.querySelectorAll('a, .btn, .glass-card');
+    const interactiveElements = document.querySelectorAll('a, .btn, .glass-card, .resume-block');
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
             cursorGlow.style.width = '600px';
@@ -72,9 +73,45 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
+
+    // CV Modal Interactivity
+    const cvModal = document.getElementById('cvModal');
+    const openCvModalBtn = document.getElementById('openCvModalBtn');
+    const openCvModalBtn2 = document.getElementById('openCvModalBtn2');
+    const closeCvModalBtn = document.getElementById('closeCvModalBtn');
+
+    function openModal() {
+        if (cvModal) {
+            cvModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+
+    function closeModal() {
+        if (cvModal) {
+            cvModal.classList.remove('open');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (openCvModalBtn) openCvModalBtn.addEventListener('click', openModal);
+    if (openCvModalBtn2) openCvModalBtn2.addEventListener('click', openModal);
+    if (closeCvModalBtn) closeCvModalBtn.addEventListener('click', closeModal);
+
+    if (cvModal) {
+        cvModal.addEventListener('click', (e) => {
+            if (e.target === cvModal) {
+                closeModal();
+            }
+        });
+    }
 });
+
